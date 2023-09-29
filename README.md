@@ -1,8 +1,8 @@
 # exploring-api
 
-Our team wants to focus on [insert text]
+Our team wants to focus on data analysis.
 
-[brief, high-level description of what kind of application your team is thinking of developing]
+Our team is in the process of making a movie recommendation application. By using analytical algorithms, our platform will evaluate a user's cinematic tastes, taking into account various factors such as genre preferences, favored actors, personal ratings, specific thematic tags, and more. Based on this nuanced understanding, our system will provide a list of film suggestions ensuring each recommendation aligns with the user's unique cinematic preference.
 
 Link to API documentation: https://developer.themoviedb.org/reference/intro/getting-started
 
