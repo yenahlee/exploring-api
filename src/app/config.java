@@ -1,8 +1,8 @@
-package app;
+package src.app;
 
-import api.movie_recommendation;
+import src.api.movie_recommendation;
 import entity.Movie;
-import use_case.TopGradeUseCase;
+import src.use_case.TopGradeUseCase;
 
 public class config {
 }

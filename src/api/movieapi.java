@@ -1,11 +1,7 @@
-package api;
-
-import entity.Movie;
+package src.api;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public interface movieapi {
-    List<Movie> top_rated() throws IOException;
+    void top_rated() throws IOException;
 }
