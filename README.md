@@ -15,3 +15,7 @@ Since the java code output is too long, the screenshot only shows part of output
 
 <img width="1274" alt="Screenshot 2023-10-01 at 12 26 01 PM" src="https://github.com/yenahlee/exploring-api/assets/144666807/23adda23-da58-4dbc-bae9-6de3a88d847d">
 
+
+
+Technical issues blocking pregress:
+import okhttp3 and json; get code 401(unauthorized key) when accessing api; how to get code from response.
