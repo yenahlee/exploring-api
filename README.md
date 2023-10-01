@@ -8,6 +8,11 @@ Link to API documentation: https://developer.themoviedb.org/reference/intro/gett
 
 Screenshot of using tool: <img width="636" alt="스크린샷 2023-09-28 오후 10 26 44" src="https://github.com/yenahlee/exploring-api/assets/115498964/f00008cc-2ad6-43dd-bf98-46dbb2f3ffb3">
 
+The output of api:
+![WechatIMG479](https://github.com/yenahlee/exploring-api/assets/144666807/d6122eb6-4485-4636-88fd-b1bb4046a6a4)
+
+![WechatIMG478](https://github.com/yenahlee/exploring-api/assets/144666807/a8d85af7-8a4d-417d-bff5-a8c750c229dc)
+
 
 Since the java code output is too long, the screenshot only shows part of output:
 <img width="1279" alt="Screenshot 2023-10-01 at 12 25 32 PM" src="https://github.com/yenahlee/exploring-api/assets/144666807/a101deb3-d553-4a45-923a-0467c9e32a7d">
