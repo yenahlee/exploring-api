@@ -1,4 +1,4 @@
-package src.api;
+package api;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -7,18 +7,18 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.net.http.HttpRequest;
 
-public class movie_recommendation implements src.api.movieapi {
+public class movie_recommendation implements api.movieapi {
     //private static final String API_TOKEN = System.getenv("API_TOKEN");
 
-    public void top_rated() throws IOException {
+    public void top_rated(int page) throws IOException {
         OkHttpClient client = new OkHttpClient();
-
         Request request = new Request.Builder()
-                .url("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1")
+                .url("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=" + page)
                 .get()
                 .addHeader("accept", "application/json")
-                .addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YzE4MjM4YmU3NWE1MTk3ZTllZWY4YmYyYzUyNTRhOSIsInN1YiI6IjY1MTZlZjJmYzUwYWQyMDBjOTFhNjYwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3f4Nimu4Jp__S3fjIGmn7xv9IN2_Z90GkYBcmQAJm5c")
+                .addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYTM1NDRjZTMxNTEyYjhlZGMzOWFlYWQyMTdiZWFlZCIsInN1YiI6IjY1MTZlZjJmYzUwYWQyMDBjOTFhNjYwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.d5F2KzF4gOHTdMcv3AZzazTgKTGv--FzILbQvLVG9EI")
                 .build();
         try {
             Response response = client.newCall(request).execute();
@@ -37,7 +37,7 @@ public class movie_recommendation implements src.api.movieapi {
         movie_recommendation Movies = new movie_recommendation();
 
         try {
-            Movies.top_rated();
+            Movies.top_rated(1);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
