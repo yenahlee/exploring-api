@@ -24,7 +24,7 @@ public class movie_recommendation implements src.api.movieapi {
             Response response = client.newCall(request).execute();
             //JSONObject responseBody = new JSONObject(response.body().string());
 
-            if (response.("code") == 200) {
+            if (response.code() == 200) {
                 JSONObject responseBody = new JSONObject(response.body().string());
                 JSONArray movies = responseBody.getJSONArray("results");
                 System.out.println(movies);
