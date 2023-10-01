@@ -1,4 +1,4 @@
-package src.api;
+package api;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -11,7 +11,7 @@ import java.io.IOException;
 public class movie_recommendation implements src.api.movieapi {
     //private static final String API_TOKEN = System.getenv("API_TOKEN");
 
-    public void top_rated() throws IOException {
+    public void top_rated(int page) throws IOException {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
@@ -23,9 +23,8 @@ public class movie_recommendation implements src.api.movieapi {
         try {
             Response response = client.newCall(request).execute();
             //JSONObject responseBody = new JSONObject(response.body().string());
-
-            if (response.("code") == 200) {
-                JSONObject responseBody = new JSONObject(response.body().string());
+            JSONObject responseBody = new JSONObject(response.body().string());
+            if (responseBody.getInt("page") == page){
                 JSONArray movies = responseBody.getJSONArray("results");
                 System.out.println(movies);
             }
@@ -38,7 +37,7 @@ public class movie_recommendation implements src.api.movieapi {
         movie_recommendation Movies = new movie_recommendation();
 
         try {
-            Movies.top_rated();
+            Movies.top_rated(1);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
